@@ -16,9 +16,10 @@ def char_count(text):
 def char_count_sort(char):
     char_list = []
     for c in char:
-        char_list.append({f"{c}", char[c]})
+        if c.isalpha():
+            char_list.append({"char":c, "num":char[c]})
     char_list.sort(key=sort_on, reverse=True)
     return char_list
 
 def sort_on(items):
-    return items["num"]
+   return items["num"]

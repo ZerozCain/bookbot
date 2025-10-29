@@ -10,7 +10,7 @@ def main():
     print(f"Found {len(get_book_text('books/frankenstein.txt').split())} total words")
     print("-------- Character Count -------")
     for item in char_count_sort(char_count(get_book_text('books/frankenstein.txt'))):
-        print(item)
+        print(f"{item["char"]}: {item["num"]}")
     
 
 main()
